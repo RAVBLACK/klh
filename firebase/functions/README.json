@@ -1,0 +1,16 @@
+{
+  "functions": "Firebase Cloud Functions",
+  "description": "Optional serverless functions for triggers and scheduled tasks",
+  "functions": [
+    {
+      "name": "onInvoiceCreated",
+      "trigger": "firestore.document('invoices/{invoiceId}').onCreate",
+      "description": "Trigger when new invoice is created"
+    },
+    {
+      "name": "generateMonthlyReport",
+      "trigger": "pubsub.schedule('0 0 1 * *')",
+      "description": "Generate monthly GSTR-1 report"
+    }
+  ]
+}

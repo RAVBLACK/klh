@@ -1,0 +1,26 @@
+{
+  "collection": "shops",
+  "description": "Shop/Business information",
+  "schema": {
+    "id": "string (auto-generated)",
+    "userId": "string (reference to users collection)",
+    "shopName": "string",
+    "shopType": "string (retail, wholesale, service, manufacturing)",
+    "customerName": "string",
+    "createdAt": "timestamp"
+  },
+  "indexes": [
+    {
+      "fields": ["userId"],
+      "queryScope": "COLLECTION"
+    }
+  ],
+  "example": {
+    "id": "shop123",
+    "userId": "user456",
+    "shopName": "ABC Electronics",
+    "shopType": "retail",
+    "customerName": "John Doe",
+    "createdAt": "2026-02-27T10:00:00Z"
+  }
+}

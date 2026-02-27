@@ -1,0 +1,24 @@
+{
+  "collection": "months",
+  "description": "Monthly periods for GST filing",
+  "schema": {
+    "id": "string (auto-generated)",
+    "shopId": "string (reference to shops collection)",
+    "month": "string (January, February, etc.)",
+    "createdAt": "timestamp",
+    "invoiceCount": "number (optional)"
+  },
+  "indexes": [
+    {
+      "fields": ["shopId"],
+      "queryScope": "COLLECTION"
+    }
+  ],
+  "example": {
+    "id": "month789",
+    "shopId": "shop123",
+    "month": "February",
+    "createdAt": "2026-02-01T00:00:00Z",
+    "invoiceCount": 15
+  }
+}
