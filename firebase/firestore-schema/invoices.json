@@ -1,0 +1,81 @@
+{
+  "collection": "invoices",
+  "description": "Invoice data extracted from images",
+  "fields": {
+    "id": {
+      "type": "string",
+      "description": "Unique invoice document ID",
+      "required": true
+    },
+    "userId": {
+      "type": "string",
+      "description": "Reference to user who uploaded",
+      "required": true
+    },
+    "invoiceNumber": {
+      "type": "string",
+      "description": "Invoice number from document",
+      "required": false
+    },
+    "date": {
+      "type": "timestamp",
+      "description": "Invoice date",
+      "required": false
+    },
+    "vendorName": {
+      "type": "string",
+      "description": "Vendor/supplier name",
+      "required": false
+    },
+    "vendorGSTIN": {
+      "type": "string",
+      "description": "Vendor GSTIN",
+      "required": false
+    },
+    "totalAmount": {
+      "type": "number",
+      "description": "Total invoice amount",
+      "required": false
+    },
+    "taxableAmount": {
+      "type": "number",
+      "description": "Taxable amount",
+      "required": false
+    },
+    "gstAmount": {
+      "type": "number",
+      "description": "Total GST amount",
+      "required": false
+    },
+    "items": {
+      "type": "array",
+      "description": "Invoice line items",
+      "required": false
+    },
+    "imageUrl": {
+      "type": "string",
+      "description": "Storage URL of invoice image",
+      "required": true
+    },
+    "extractionConfidence": {
+      "type": "number",
+      "description": "AI extraction confidence score (0-100)",
+      "required": false
+    },
+    "status": {
+      "type": "string",
+      "description": "Processing status: pending, processed, verified",
+      "required": true
+    },
+    "createdAt": {
+      "type": "timestamp",
+      "description": "Upload timestamp",
+      "required": true
+    },
+    "updatedAt": {
+      "type": "timestamp",
+      "description": "Last update timestamp",
+      "required": true
+    }
+  }
+}

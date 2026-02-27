@@ -1,0 +1,55 @@
+{
+  "collection": "copilot_chats",
+  "description": "AI copilot chat sessions and messages",
+  "fields": {
+    "id": {
+      "type": "string",
+      "description": "Unique chat session ID",
+      "required": true
+    },
+    "userId": {
+      "type": "string",
+      "description": "Reference to user",
+      "required": true
+    },
+    "contextType": {
+      "type": "string",
+      "description": "Context: invoice, gstr1, general",
+      "required": true
+    },
+    "contextId": {
+      "type": "string",
+      "description": "Reference to invoice or draft ID",
+      "required": false
+    },
+    "messages": {
+      "type": "array",
+      "description": "Array of chat messages",
+      "subfields": {
+        "role": {
+          "type": "string",
+          "description": "user or assistant"
+        },
+        "content": {
+          "type": "string",
+          "description": "Message content"
+        },
+        "timestamp": {
+          "type": "timestamp",
+          "description": "Message timestamp"
+        }
+      },
+      "required": true
+    },
+    "createdAt": {
+      "type": "timestamp",
+      "description": "Session creation timestamp",
+      "required": true
+    },
+    "updatedAt": {
+      "type": "timestamp",
+      "description": "Last message timestamp",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "collection": "users",
+  "description": "User profile and business information",
+  "fields": {
+    "uid": {
+      "type": "string",
+      "description": "Firebase Auth user ID",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "description": "User email address",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "description": "User full name",
+      "required": true
+    },
+    "businessName": {
+      "type": "string",
+      "description": "Business name",
+      "required": false
+    },
+    "gstin": {
+      "type": "string",
+      "description": "Business GSTIN number",
+      "required": false
+    },
+    "phone": {
+      "type": "string",
+      "description": "Contact phone number",
+      "required": false
+    },
+    "createdAt": {
+      "type": "timestamp",
+      "description": "Account creation timestamp",
+      "required": true
+    },
+    "updatedAt": {
+      "type": "timestamp",
+      "description": "Last update timestamp",
+      "required": true
+    }
+  }
+}

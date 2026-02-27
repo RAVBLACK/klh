@@ -1,0 +1,66 @@
+{
+  "collection": "gstr1_drafts",
+  "description": "Generated GSTR-1 draft returns",
+  "fields": {
+    "id": {
+      "type": "string",
+      "description": "Unique draft ID",
+      "required": true
+    },
+    "userId": {
+      "type": "string",
+      "description": "Reference to user",
+      "required": true
+    },
+    "period": {
+      "type": "string",
+      "description": "Tax period (MM-YYYY)",
+      "required": true
+    },
+    "gstin": {
+      "type": "string",
+      "description": "Business GSTIN",
+      "required": true
+    },
+    "entries": {
+      "type": "array",
+      "description": "Array of GSTR-1 entries",
+      "required": true
+    },
+    "totalTaxableValue": {
+      "type": "number",
+      "description": "Total taxable value",
+      "required": false
+    },
+    "totalIGST": {
+      "type": "number",
+      "description": "Total IGST amount",
+      "required": false
+    },
+    "totalCGST": {
+      "type": "number",
+      "description": "Total CGST amount",
+      "required": false
+    },
+    "totalSGST": {
+      "type": "number",
+      "description": "Total SGST amount",
+      "required": false
+    },
+    "status": {
+      "type": "string",
+      "description": "Draft status: draft, reviewed, exported",
+      "required": true
+    },
+    "createdAt": {
+      "type": "timestamp",
+      "description": "Creation timestamp",
+      "required": true
+    },
+    "updatedAt": {
+      "type": "timestamp",
+      "description": "Last update timestamp",
+      "required": true
+    }
+  }
+}
